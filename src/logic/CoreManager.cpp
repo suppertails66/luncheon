@@ -1,4 +1,4 @@
-#include "CoreManager.h"
+#include "logic/CoreManager.h"
 #include "graphics/GraphicsCoreType.h"
 #include "SDL.h"
 #include "graphics/SDL2GraphicsCore.h"

@@ -1,4 +1,4 @@
-#include "GameStarter.h"
+#include "logic/GameStarter.h"
 #include "timing/TickTiming.h"
 #include <iostream>
 
