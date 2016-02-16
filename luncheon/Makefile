@@ -1,7 +1,7 @@
 AR=ar
 CXX=g++
 # Compile only
-CDEFINES = -dLUNCHEON_ENABLE_FREETYPE
+CDEFINES = -dLUNCHEON_ENABLE_FREETYPE -dLUNCHEON_ENABLE_VORBISFILE
 CLIBS = -lSDL2 -lfreetype -lvorbisfile
 CFLAGS = -std=gnu++11 -O2 -Wall
 CINCLUDES = -I/usr/local/include/SDL2 -I/usr/include/freetype2 -I/usr/include/vorbis
