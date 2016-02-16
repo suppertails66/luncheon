@@ -2,6 +2,8 @@
 #define SDL2SOUNDCORE_H
 
 
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "sound/SoundCore.h"
 #include "SDL.h"
 
@@ -47,6 +49,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif 

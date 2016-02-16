@@ -1,6 +1,5 @@
 #include "logic/CoreManager.h"
 #include "graphics/GraphicsCoreType.h"
-#include "SDL.h"
 #include "graphics/SDL2GraphicsCore.h"
 #include "font/FreeTypeFontCore.h"
 #include "sound/SDL2SoundCore.h"
@@ -9,6 +8,10 @@
 #include "input/SDL2InputCore.h"
 #include "timing/SDL2TimingCore.h"
 #include <iostream>
+
+#ifdef LUNCHEON_ENABLE_SDL2
+  #include "SDL.h"
+#endif
 
 namespace Luncheon {
 
@@ -47,7 +50,9 @@ void CoreManager::initializeCores() {
     // ...
     break;
   case GraphicsCoreTypes::SDL2:
+    #ifdef LUNCHEON_ENABLE_SDL2
     graphicsCore_ = new SDL2GraphicsCore();
+	#endif
     break;
   default:
     graphicsCore_ = 0;
@@ -75,8 +80,10 @@ void CoreManager::initializeCores() {
     // ...
     break;
   case SoundCoreTypes::SDL2:
+    #ifdef LUNCHEON_ENABLE_SDL2
     soundCore_ = new SDL2SoundCore(SoundMixerTypes::Simple,
                                    SoundStateTypes::Simple);
+    #endif
     break;
   default:
     soundCore_ = 0;
@@ -90,7 +97,9 @@ void CoreManager::initializeCores() {
     // ...
     break;
   case InputCoreTypes::SDL2:
+    #ifdef LUNCHEON_ENABLE_SDL2
     inputCore_ = new SDL2InputCore();
+	#endif
     break;
   default:
     inputCore_ = 0;
@@ -104,7 +113,9 @@ void CoreManager::initializeCores() {
     // ...
     break;
   case TimingCoreTypes::SDL2:
+    #ifdef LUNCHEON_ENABLE_SDL2
     timingCore_ = new SDL2TimingCore();
+	#endif
     break;
   default:
     timingCore_ = 0;
@@ -192,7 +203,9 @@ void CoreManager::initializeCorePrerequisites() {
   case GraphicsCoreTypes::dummy:
     break;
   case GraphicsCoreTypes::SDL2:
-    SDL2SystemsToInitialize |= SDL_INIT_VIDEO;
+	#ifdef LUNCHEON_ENABLE_SDL2
+      SDL2SystemsToInitialize |= SDL_INIT_VIDEO;
+	#endif
     break;
   }
   
@@ -210,7 +223,9 @@ void CoreManager::initializeCorePrerequisites() {
   case SoundCoreTypes::dummy:
     break;
   case SoundCoreTypes::SDL2:
+	#ifdef LUNCHEON_ENABLE_SDL2
     SDL2SystemsToInitialize |= SDL_INIT_AUDIO;
+	#endif
     break;
   }
   
@@ -219,7 +234,9 @@ void CoreManager::initializeCorePrerequisites() {
   case InputCoreTypes::dummy:
     break;
   case InputCoreTypes::SDL2:
+	#ifdef LUNCHEON_ENABLE_SDL2
     SDL2SystemsToInitialize |= SDL_INIT_EVENTS;
+	#endif
     break;
   }
   
@@ -228,16 +245,20 @@ void CoreManager::initializeCorePrerequisites() {
   case TimingCoreTypes::dummy:
     break;
   case TimingCoreTypes::SDL2:
+	#ifdef LUNCHEON_ENABLE_SDL2
     SDL2SystemsToInitialize |= SDL_INIT_TIMER;
+	#endif
     break;
   }
   
   
   
   // Start SDL if needed
+  #ifdef LUNCHEON_ENABLE_SDL2
   if (SDL2SystemsToInitialize != 0) {
     /*int result = */SDL_Init(SDL2SystemsToInitialize);
   }
+  #endif
 }
 
 void CoreManager::shutDownCorePrerequisites() {
@@ -245,9 +266,11 @@ void CoreManager::shutDownCorePrerequisites() {
   // ...
   
   // shut down SDL if running
+  #ifdef LUNCHEON_ENABLE_SDL2
   if (SDL_WasInit(0)) {
     SDL_Quit();
   }
+  #endif
 }
 
 

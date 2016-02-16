@@ -2,6 +2,8 @@
 #define SDL2GRAPHICSCORE_H
 
 
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "graphics/GraphicsCore.h"
 #include "graphics/GraphicSurface.h"
 #include <string>
@@ -34,6 +36,7 @@ protected:
 
 };
 
+#endif
 
 
 #endif

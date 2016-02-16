@@ -2,6 +2,8 @@
 #define SDL2GRAPHICSURFACE_H
 
 
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "graphics/GraphicSurface.h"
 #include "graphics/SDL2GraphicsCore.h"
 #include "graphics/DrawPosition.h"
@@ -62,6 +64,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif

@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "timing/SDL2TimingCore.h"
 
 namespace Luncheon {
@@ -35,3 +37,5 @@ Uint32 SDL2TimingCore::delayCallback(Uint32 interval, void* param) {
 
 
 }; 
+
+#endif

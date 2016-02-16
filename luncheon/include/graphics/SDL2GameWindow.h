@@ -1,6 +1,9 @@
 #ifndef SDL2GAMEWINDOW_H
 #define SDL2GAMEWINDOW_H
 
+
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "SDL.h"
 #include "graphics/GameWindow.h"
 
@@ -53,6 +56,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif 

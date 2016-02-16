@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "sound/SDL2SoundCore.h"
 #include <cstring>
 #include <iostream>
@@ -131,3 +133,5 @@ void SDL2SoundCore::audioCallback(void* userdata,
 
 
 }; 
+
+#endif

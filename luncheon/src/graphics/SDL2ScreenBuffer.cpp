@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "graphics/SDL2ScreenBuffer.h"
 #include "graphics/SDL2GraphicSurface.h"
 #include "graphics/SDL2DrawableSurface.h"
@@ -175,3 +177,5 @@ void SDL2ScreenBuffer::clearClipArea() {
 
 
 };
+
+#endif

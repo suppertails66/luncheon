@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "graphics/SDL2DrawableSurface.h"
 #include "graphics/DrawPosition.h"
 #include "graphics/DrawColor.h"
@@ -186,3 +188,5 @@ void SDL2DrawableSurface::clearTexture() {
 
 
 };
+
+#endif

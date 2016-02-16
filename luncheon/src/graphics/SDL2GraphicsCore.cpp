@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "graphics/SDL2GraphicsCore.h"
 #include "graphics/GraphicsCoreType.h"
 #include "graphics/SDL2GameWindow.h"
@@ -62,3 +64,5 @@ GraphicSurface* SDL2GraphicsCore::loadBMPFromFile(const std::string& filename) {
 
 
 }; 
+
+#endif

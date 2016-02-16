@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "SDL.h"
 #include "graphics/SDL2GameWindow.h"
 #include "graphics/SDL2GraphicSurface.h"
@@ -146,3 +148,5 @@ int SDL2GameWindow::getNativeHeight() {
 
 
 }; 
+
+#endif

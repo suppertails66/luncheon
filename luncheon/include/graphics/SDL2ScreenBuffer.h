@@ -1,6 +1,9 @@
 #ifndef SDL2SCREENBUFFER_H
 #define SDL2SCREENBUFFER_H
 
+
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "graphics/ScreenBuffer.h"
 #include "graphics/SDL2GameWindow.h"
 #include "SDL.h"
@@ -70,6 +73,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif

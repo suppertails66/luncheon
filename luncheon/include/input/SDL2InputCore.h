@@ -2,6 +2,8 @@
 #define SDL2INPUTCORE_H
 
 
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "input/InputCore.h"
 #include "SDL.h"
 
@@ -37,6 +39,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif 

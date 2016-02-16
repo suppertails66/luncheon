@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "input/SDL2InputCore.h"
 #include <iostream>
 
@@ -401,3 +403,5 @@ InputKeys::InputKey SDL2InputCore::mapSDLScancodeToInputKey(
 
 
 };
+
+#endif

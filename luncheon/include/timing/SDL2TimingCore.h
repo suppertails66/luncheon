@@ -2,6 +2,8 @@
 #define SDL2TIMINGCORE_H
 
 
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "timing/TimingCore.h"
 #include "SDL.h"
 
@@ -27,6 +29,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif 

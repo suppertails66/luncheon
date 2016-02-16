@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_SDL2
+
 #include "graphics/SDL2GraphicSurface.h"
 #include "graphics/DrawPosition.h"
 #include "graphics/SDL2ScreenBuffer.h"
@@ -135,3 +137,5 @@ const SDL_Texture& SDL2GraphicSurface::texture() const {
 
 
 };
+
+#endif
