@@ -66,7 +66,9 @@ void CoreManager::initializeCores() {
     // ...
     break;
   case FontCoreTypes::FreeType:
+    #ifdef LUNCHEON_ENABLE_FREETYPE
     fontCore_ = new FreeTypeFontCore(*graphicsCore_);
+	#endif
     break;
   default:
     fontCore_ = 0;
