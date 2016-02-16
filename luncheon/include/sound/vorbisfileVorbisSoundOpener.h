@@ -2,6 +2,8 @@
 #define VORBISFILEVORBISSOUNDOPENER_H
 
 
+#ifdef LUNCHEON_ENABLE_VORBISFILE
+
 #include "sound/VorbisSoundOpener.h"
 #include "vorbisfile.h"
 #include "codec.h"
@@ -34,6 +36,8 @@ protected:
 
 
 };
+
+#endif	// LUNCHEON_ENABLE_VORBISFILE
 
 
 #endif 

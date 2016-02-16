@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_VORBISFILE
+
 #include "sound/OVHandleCallbacks.h"
 #include "util/ByteSizes.h"
 #include <iostream>
@@ -138,3 +140,5 @@ long OVHandleCallbacks::tell_func(void* datasource) {
 
 
 }; 
+
+#endif

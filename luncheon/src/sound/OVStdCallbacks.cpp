@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_VORBISFILE
+
 #include "sound/OVStdCallbacks.h"
 
 namespace Luncheon {
@@ -53,3 +55,5 @@ long OVStdCallbacks::tell_func(void* datasource) {
 
 
 }; 
+
+#endif

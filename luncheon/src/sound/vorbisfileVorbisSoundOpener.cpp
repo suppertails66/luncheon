@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_VORBISFILE
+
 #include "sound/vorbisfileVorbisSoundOpener.h"
 #include "sound/RawSoundFile.h"
 #include "util/EndiannessType.h"
@@ -184,3 +186,5 @@ SoundFile* vorbisfileVorbisSoundOpener::loadVorbis(
 
 
 }; 
+
+#endif

@@ -2,6 +2,8 @@
 #define OVHANDLECALLBACKS_H
 
 
+#ifdef LUNCHEON_ENABLE_VORBISFILE
+
 #include "codec.h"
 #include "vorbisfile.h"
 #include "resource/ResourceFileHandle.h"
@@ -55,6 +57,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif 

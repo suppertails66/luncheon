@@ -25,7 +25,9 @@ public:
   
 protected:
 
+#ifdef LUNCHEON_ENABLE_VORBISFILE
   vorbisfileVorbisSoundOpener vorbisSoundOpener_;
+#endif
 
 };
 

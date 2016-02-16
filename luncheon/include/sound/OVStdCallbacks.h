@@ -1,6 +1,7 @@
 #ifndef OVSTDCALLBACKS_H
 #define OVSTDCALLBACKS_H
 
+#ifdef LUNCHEON_ENABLE_VORBISFILE
 
 #include "codec.h"
 #include "vorbisfile.h"
@@ -45,6 +46,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif
