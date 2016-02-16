@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{01D08E0C-29DE-4530-88C6-F330D33DD0B9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>luncheon</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\animation\Animation.h" />
+    <ClInclude Include="include\animation\AnimationFrame.h" />
+    <ClInclude Include="include\animation\AnimationFrameCollection.h" />
+    <ClInclude Include="include\animation\AnimationLoader.h" />
+    <ClInclude Include="include\animation\AnimationPlayer.h" />
+    <ClInclude Include="include\animation\AnimationPlayerCollection.h" />
+    <ClInclude Include="include\animation\AnimationPlayerMap.h" />
+    <ClInclude Include="include\animation\ResourceIDAnimationMap.h" />
+    <ClInclude Include="include\animation\SerializableAnimation.h" />
+    <ClInclude Include="include\animation\SerializableAnimationFrame.h" />
+    <ClInclude Include="include\animation\SerializableAnimationFrameCollection.h" />
+    <ClInclude Include="include\animation\SerializableRawAnimationFrame.h" />
+    <ClInclude Include="include\animation\SerializableRLE8AnimationFrame.h" />
+    <ClInclude Include="include\animation\SerializableSimpleAnimation.h" />
+    <ClInclude Include="include\animation\SimpleAnimation.h" />
+    <ClInclude Include="include\animation\SimpleAnimationFrame.h" />
+    <ClInclude Include="include\animation\SimpleAnimationPlayer.h" />
+    <ClInclude Include="include\font\CharacterCode.h" />
+    <ClInclude Include="include\font\CharacterCodeFontMap.h" />
+    <ClInclude Include="include\font\FontCache.h" />
+    <ClInclude Include="include\font\FontCore.h" />
+    <ClInclude Include="include\font\FontCoreType.h" />
+    <ClInclude Include="include\font\FontWriter.h" />
+    <ClInclude Include="include\font\FreeTypeFontCache.h" />
+    <ClInclude Include="include\font\FreeTypeFontCore.h" />
+    <ClInclude Include="include\font\FreeTypeRenderedFont.h" />
+    <ClInclude Include="include\font\FreeTypeRenderedFontCharacter.h" />
+    <ClInclude Include="include\font\RenderedFont.h" />
+    <ClInclude Include="include\font\RenderedFontCharacter.h" />
+    <ClInclude Include="include\font\RenderedFontMap.h" />
+    <ClInclude Include="include\font\SizedFontCacheMap.h" />
+    <ClInclude Include="include\font\WritePosition.h" />
+    <ClInclude Include="include\graphics\ClipArea.h" />
+    <ClInclude Include="include\graphics\ColorMap.h" />
+    <ClInclude Include="include\graphics\DrawableSurface.h" />
+    <ClInclude Include="include\graphics\DrawColor.h" />
+    <ClInclude Include="include\graphics\DrawPosition.h" />
+    <ClInclude Include="include\graphics\GameWindow.h" />
+    <ClInclude Include="include\graphics\GameWindowMode.h" />
+    <ClInclude Include="include\graphics\GraphicsCore.h" />
+    <ClInclude Include="include\graphics\GraphicsCoreType.h" />
+    <ClInclude Include="include\graphics\GraphicSurface.h" />
+    <ClInclude Include="include\graphics\RectArea.h" />
+    <ClInclude Include="include\graphics\ReverseColorMap.h" />
+    <ClInclude Include="include\graphics\ScreenBuffer.h" />
+    <ClInclude Include="include\graphics\SDL2DrawableSurface.h" />
+    <ClInclude Include="include\graphics\SDL2GameWindow.h" />
+    <ClInclude Include="include\graphics\SDL2GraphicsCore.h" />
+    <ClInclude Include="include\graphics\SDL2GraphicSurface.h" />
+    <ClInclude Include="include\graphics\SDL2ScreenBuffer.h" />
+    <ClInclude Include="include\input\InputCore.h" />
+    <ClInclude Include="include\input\InputCoreType.h" />
+    <ClInclude Include="include\input\InputKey.h" />
+    <ClInclude Include="include\input\InputKeyState.h" />
+    <ClInclude Include="include\input\InputKeyStateMap.h" />
+    <ClInclude Include="include\input\InputKeyStates.h" />
+    <ClInclude Include="include\input\SDL2InputCore.h" />
+    <ClInclude Include="include\input\TwinInputKeyStates.h" />
+    <ClInclude Include="include\logic\BorderAnimationPlayers.h" />
+    <ClInclude Include="include\logic\BorderedWindow.h" />
+    <ClInclude Include="include\logic\BorderResourceIDs.h" />
+    <ClInclude Include="include\logic\CoreManager.h" />
+    <ClInclude Include="include\logic\FocusableObject.h" />
+    <ClInclude Include="include\logic\GameMemory.h" />
+    <ClInclude Include="include\logic\GameObject.h" />
+    <ClInclude Include="include\logic\GameObjectCollection.h" />
+    <ClInclude Include="include\logic\GameObjectCollectionMap.h" />
+    <ClInclude Include="include\logic\GameObjectID.h" />
+    <ClInclude Include="include\logic\GameObjectManager.h" />
+    <ClInclude Include="include\logic\GameScene.h" />
+    <ClInclude Include="include\logic\GameStarter.h" />
+    <ClInclude Include="include\logic\ListMenuItem.h" />
+    <ClInclude Include="include\logic\ListMenuItemCollection.h" />
+    <ClInclude Include="include\logic\ListMenuItemEventType.h" />
+    <ClInclude Include="include\logic\ListMenuItemFunctor.h" />
+    <ClInclude Include="include\logic\ListMenuWindowArea.h" />
+    <ClInclude Include="include\logic\MenuWindowArea.h" />
+    <ClInclude Include="include\logic\MessagePrintingFunctor.h" />
+    <ClInclude Include="include\logic\MessagePrintingWindowArea.h" />
+    <ClInclude Include="include\logic\SimpleMessagePrintingFunctor.h" />
+    <ClInclude Include="include\logic\SimpleMessagePrintingWindowArea.h" />
+    <ClInclude Include="include\logic\SimpleMessageQueue.h" />
+    <ClInclude Include="include\logic\VerticalListMenuWindowArea.h" />
+    <ClInclude Include="include\logic\Window.h" />
+    <ClInclude Include="include\logic\WindowArea.h" />
+    <ClInclude Include="include\resource\AnimationResourceFileLoader.h" />
+    <ClInclude Include="include\resource\AnimationTypeID.h" />
+    <ClInclude Include="include\resource\IndexResourceChunk.h" />
+    <ClInclude Include="include\resource\IndexResourceChunkEntry.h" />
+    <ClInclude Include="include\resource\LoadCountMap.h" />
+    <ClInclude Include="include\resource\ResourceAddress.h" />
+    <ClInclude Include="include\resource\ResourceChunk.h" />
+    <ClInclude Include="include\resource\ResourceChunkHeader.h" />
+    <ClInclude Include="include\resource\ResourceChunkID.h" />
+    <ClInclude Include="include\resource\ResourceFileHandle.h" />
+    <ClInclude Include="include\resource\ResourceFileLoader.h" />
+    <ClInclude Include="include\resource\ResourceID.h" />
+    <ClInclude Include="include\resource\ResourceIDIndexMap.h" />
+    <ClInclude Include="include\resource\ResourceTypeID.h" />
+    <ClInclude Include="include\resource\SoundResourceFileLoader.h" />
+    <ClInclude Include="include\resource\SoundTypeID.h" />
+    <ClInclude Include="include\sound\OVHandleCallbacks.h" />
+    <ClInclude Include="include\sound\OVStdCallbacks.h" />
+    <ClInclude Include="include\sound\RawSoundFile.h" />
+    <ClInclude Include="include\sound\RawSoundPlayer.h" />
+    <ClInclude Include="include\sound\ResourceIDSoundMap.h" />
+    <ClInclude Include="include\sound\SampleFrameUnit.h" />
+    <ClInclude Include="include\sound\SampleUnit.h" />
+    <ClInclude Include="include\sound\SDL2SoundCore.h" />
+    <ClInclude Include="include\sound\SimpleSoundMixer.h" />
+    <ClInclude Include="include\sound\SimpleSoundState.h" />
+    <ClInclude Include="include\sound\SoundCore.h" />
+    <ClInclude Include="include\sound\SoundCoreType.h" />
+    <ClInclude Include="include\sound\SoundFile.h" />
+    <ClInclude Include="include\sound\SoundLoader.h" />
+    <ClInclude Include="include\sound\SoundMixer.h" />
+    <ClInclude Include="include\sound\SoundMixerType.h" />
+    <ClInclude Include="include\sound\SoundOpener.h" />
+    <ClInclude Include="include\sound\SoundPlayer.h" />
+    <ClInclude Include="include\sound\SoundPlayerCollection.h" />
+    <ClInclude Include="include\sound\SoundState.h" />
+    <ClInclude Include="include\sound\SoundStateType.h" />
+    <ClInclude Include="include\sound\vorbisfileVorbisSoundOpener.h" />
+    <ClInclude Include="include\sound\VorbisSoundOpener.h" />
+    <ClInclude Include="include\timing\GTick.h" />
+    <ClInclude Include="include\timing\RTick.h" />
+    <ClInclude Include="include\timing\SDL2TimingCore.h" />
+    <ClInclude Include="include\timing\TickTiming.h" />
+    <ClInclude Include="include\timing\TimingCore.h" />
+    <ClInclude Include="include\timing\TimingCoreType.h" />
+    <ClInclude Include="include\util\ByteConversion.h" />
+    <ClInclude Include="include\util\ByteSizes.h" />
+    <ClInclude Include="include\util\CoordinatePair.h" />
+    <ClInclude Include="include\util\DumbPointer.h" />
+    <ClInclude Include="include\util\EndiannessType.h" />
+    <ClInclude Include="include\util\GenericException.h" />
+    <ClInclude Include="include\util\MiscMath.h" />
+    <ClInclude Include="include\util\RLE8Command.h" />
+    <ClInclude Include="include\util\RLE8CommandCollection.h" />
+    <ClInclude Include="include\util\RLE8CommandType.h" />
+    <ClInclude Include="include\util\RLE8Compressor.h" />
+    <ClInclude Include="include\util\RLE8ValueCollection.h" />
+    <ClInclude Include="include\util\SignednessType.h" />
+    <ClInclude Include="include\util\StringConversion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\animation\Animation.cpp" />
+    <ClCompile Include="src\animation\AnimationFrame.cpp" />
+    <ClCompile Include="src\animation\AnimationFrameCollection.cpp" />
+    <ClCompile Include="src\animation\AnimationLoader.cpp" />
+    <ClCompile Include="src\animation\AnimationPlayer.cpp" />
+    <ClCompile Include="src\animation\AnimationPlayerCollection.cpp" />
+    <ClCompile Include="src\animation\AnimationPlayerMap.cpp" />
+    <ClCompile Include="src\animation\ResourceIDAnimationMap.cpp" />
+    <ClCompile Include="src\animation\SerializableAnimation.cpp" />
+    <ClCompile Include="src\animation\SerializableAnimationFrame.cpp" />
+    <ClCompile Include="src\animation\SerializableAnimationFrameCollection.cpp" />
+    <ClCompile Include="src\animation\SerializableRawAnimationFrame.cpp" />
+    <ClCompile Include="src\animation\SerializableRLE8AnimationFrame.cpp" />
+    <ClCompile Include="src\animation\SerializableSimpleAnimation.cpp" />
+    <ClCompile Include="src\animation\SimpleAnimation.cpp" />
+    <ClCompile Include="src\animation\SimpleAnimationFrame.cpp" />
+    <ClCompile Include="src\animation\SimpleAnimationPlayer.cpp" />
+    <ClCompile Include="src\font\CharacterCode.cpp" />
+    <ClCompile Include="src\font\CharacterCodeFontMap.cpp" />
+    <ClCompile Include="src\font\FontCache.cpp" />
+    <ClCompile Include="src\font\FontCore.cpp" />
+    <ClCompile Include="src\font\FontCoreType.cpp" />
+    <ClCompile Include="src\font\FontWriter.cpp" />
+    <ClCompile Include="src\font\FreeTypeFontCache.cpp" />
+    <ClCompile Include="src\font\FreeTypeFontCore.cpp" />
+    <ClCompile Include="src\font\FreeTypeRenderedFont.cpp" />
+    <ClCompile Include="src\font\FreeTypeRenderedFontCharacter.cpp" />
+    <ClCompile Include="src\font\RenderedFont.cpp" />
+    <ClCompile Include="src\font\RenderedFontCharacter.cpp" />
+    <ClCompile Include="src\font\RenderedFontMap.cpp" />
+    <ClCompile Include="src\font\SizedFontCacheMap.cpp" />
+    <ClCompile Include="src\font\WritePosition.cpp" />
+    <ClCompile Include="src\graphics\ClipArea.cpp" />
+    <ClCompile Include="src\graphics\ColorMap.cpp" />
+    <ClCompile Include="src\graphics\DrawableSurface.cpp" />
+    <ClCompile Include="src\graphics\DrawColor.cpp" />
+    <ClCompile Include="src\graphics\DrawPosition.cpp" />
+    <ClCompile Include="src\graphics\GameWindow.cpp" />
+    <ClCompile Include="src\graphics\GameWindowMode.cpp" />
+    <ClCompile Include="src\graphics\GraphicsCore.cpp" />
+    <ClCompile Include="src\graphics\GraphicsCoreType.cpp" />
+    <ClCompile Include="src\graphics\GraphicSurface.cpp" />
+    <ClCompile Include="src\graphics\RectArea.cpp" />
+    <ClCompile Include="src\graphics\ReverseColorMap.cpp" />
+    <ClCompile Include="src\graphics\ScreenBuffer.cpp" />
+    <ClCompile Include="src\graphics\SDL2DrawableSurface.cpp" />
+    <ClCompile Include="src\graphics\SDL2GameWindow.cpp" />
+    <ClCompile Include="src\graphics\SDL2GraphicsCore.cpp" />
+    <ClCompile Include="src\graphics\SDL2GraphicSurface.cpp" />
+    <ClCompile Include="src\graphics\SDL2ScreenBuffer.cpp" />
+    <ClCompile Include="src\input\InputCore.cpp" />
+    <ClCompile Include="src\input\InputCoreType.cpp" />
+    <ClCompile Include="src\input\InputKey.cpp" />
+    <ClCompile Include="src\input\InputKeyState.cpp" />
+    <ClCompile Include="src\input\InputKeyStateMap.cpp" />
+    <ClCompile Include="src\input\InputKeyStates.cpp" />
+    <ClCompile Include="src\input\SDL2InputCore.cpp" />
+    <ClCompile Include="src\input\TwinInputKeyStates.cpp" />
+    <ClCompile Include="src\logic\BorderAnimationPlayers.cpp" />
+    <ClCompile Include="src\logic\BorderedWindow.cpp" />
+    <ClCompile Include="src\logic\BorderResourceIDs.cpp" />
+    <ClCompile Include="src\logic\CoreManager.cpp" />
+    <ClCompile Include="src\logic\FocusableObject.cpp" />
+    <ClCompile Include="src\logic\GameMemory.cpp" />
+    <ClCompile Include="src\logic\GameObject.cpp" />
+    <ClCompile Include="src\logic\GameObjectCollection.cpp" />
+    <ClCompile Include="src\logic\GameObjectCollectionMap.cpp" />
+    <ClCompile Include="src\logic\GameObjectID.cpp" />
+    <ClCompile Include="src\logic\GameObjectManager.cpp" />
+    <ClCompile Include="src\logic\GameScene.cpp" />
+    <ClCompile Include="src\logic\GameStarter.cpp" />
+    <ClCompile Include="src\logic\ListMenuItem.cpp" />
+    <ClCompile Include="src\logic\ListMenuItemCollection.cpp" />
+    <ClCompile Include="src\logic\ListMenuItemEventType.cpp" />
+    <ClCompile Include="src\logic\ListMenuItemFunctor.cpp" />
+    <ClCompile Include="src\logic\ListMenuWindowArea.cpp" />
+    <ClCompile Include="src\logic\MenuWindowArea.cpp" />
+    <ClCompile Include="src\logic\MessagePrintingFunctor.cpp" />
+    <ClCompile Include="src\logic\MessagePrintingWindowArea.cpp" />
+    <ClCompile Include="src\logic\SimpleMessagePrintingFunctor.cpp" />
+    <ClCompile Include="src\logic\SimpleMessagePrintingWindowArea.cpp" />
+    <ClCompile Include="src\logic\SimpleMessageQueue.cpp" />
+    <ClCompile Include="src\logic\VerticalListMenuWindowArea.cpp" />
+    <ClCompile Include="src\logic\Window.cpp" />
+    <ClCompile Include="src\logic\WindowArea.cpp" />
+    <ClCompile Include="src\resource\AnimationResourceFileLoader.cpp" />
+    <ClCompile Include="src\resource\AnimationTypeID.cpp" />
+    <ClCompile Include="src\resource\IndexResourceChunk.cpp" />
+    <ClCompile Include="src\resource\IndexResourceChunkEntry.cpp" />
+    <ClCompile Include="src\resource\LoadCountMap.cpp" />
+    <ClCompile Include="src\resource\ResourceAddress.cpp" />
+    <ClCompile Include="src\resource\ResourceChunk.cpp" />
+    <ClCompile Include="src\resource\ResourceChunkHeader.cpp" />
+    <ClCompile Include="src\resource\ResourceChunkID.cpp" />
+    <ClCompile Include="src\resource\ResourceFileHandle.cpp" />
+    <ClCompile Include="src\resource\ResourceFileLoader.cpp" />
+    <ClCompile Include="src\resource\ResourceID.cpp" />
+    <ClCompile Include="src\resource\ResourceIDIndexMap.cpp" />
+    <ClCompile Include="src\resource\ResourceTypeID.cpp" />
+    <ClCompile Include="src\resource\SoundResourceFileLoader.cpp" />
+    <ClCompile Include="src\resource\SoundTypeID.cpp" />
+    <ClCompile Include="src\sound\OVHandleCallbacks.cpp" />
+    <ClCompile Include="src\sound\OVStdCallbacks.cpp" />
+    <ClCompile Include="src\sound\RawSoundFile.cpp" />
+    <ClCompile Include="src\sound\RawSoundPlayer.cpp" />
+    <ClCompile Include="src\sound\ResourceIDSoundMap.cpp" />
+    <ClCompile Include="src\sound\SampleFrameUnit.cpp" />
+    <ClCompile Include="src\sound\SampleUnit.cpp" />
+    <ClCompile Include="src\sound\SDL2SoundCore.cpp" />
+    <ClCompile Include="src\sound\SimpleSoundMixer.cpp" />
+    <ClCompile Include="src\sound\SimpleSoundState.cpp" />
+    <ClCompile Include="src\sound\SoundCore.cpp" />
+    <ClCompile Include="src\sound\SoundCoreType.cpp" />
+    <ClCompile Include="src\sound\SoundFile.cpp" />
+    <ClCompile Include="src\sound\SoundLoader.cpp" />
+    <ClCompile Include="src\sound\SoundMixer.cpp" />
+    <ClCompile Include="src\sound\SoundMixerType.cpp" />
+    <ClCompile Include="src\sound\SoundOpener.cpp" />
+    <ClCompile Include="src\sound\SoundPlayer.cpp" />
+    <ClCompile Include="src\sound\SoundPlayerCollection.cpp" />
+    <ClCompile Include="src\sound\SoundState.cpp" />
+    <ClCompile Include="src\sound\SoundStateType.cpp" />
+    <ClCompile Include="src\sound\vorbisfileVorbisSoundOpener.cpp" />
+    <ClCompile Include="src\sound\VorbisSoundOpener.cpp" />
+    <ClCompile Include="src\timing\GTick.cpp" />
+    <ClCompile Include="src\timing\RTick.cpp" />
+    <ClCompile Include="src\timing\SDL2TimingCore.cpp" />
+    <ClCompile Include="src\timing\TickTiming.cpp" />
+    <ClCompile Include="src\timing\TimingCore.cpp" />
+    <ClCompile Include="src\timing\TimingCoreType.cpp" />
+    <ClCompile Include="src\util\ByteConversion.cpp" />
+    <ClCompile Include="src\util\ByteSizes.cpp" />
+    <ClCompile Include="src\util\CoordinatePair.cpp" />
+    <ClCompile Include="src\util\DumbPointer.cpp" />
+    <ClCompile Include="src\util\EndiannessType.cpp" />
+    <ClCompile Include="src\util\GenericException.cpp" />
+    <ClCompile Include="src\util\MiscMath.cpp" />
+    <ClCompile Include="src\util\RLE8Command.cpp" />
+    <ClCompile Include="src\util\RLE8CommandCollection.cpp" />
+    <ClCompile Include="src\util\RLE8CommandType.cpp" />
+    <ClCompile Include="src\util\RLE8Compressor.cpp" />
+    <ClCompile Include="src\util\RLE8ValueCollection.cpp" />
+    <ClCompile Include="src\util\SignednessType.cpp" />
+    <ClCompile Include="src\util\StringConversion.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
