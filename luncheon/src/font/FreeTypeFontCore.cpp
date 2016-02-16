@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_FREETYPE
+
 #include "font/FreeTypeFontCore.h"
 #include "font/FreeTypeRenderedFont.h"
 #include <string>
@@ -93,3 +95,5 @@ FT_Library& FreeTypeFontCore::ftLibraryObject() {
 
 
 }; 
+
+#endif

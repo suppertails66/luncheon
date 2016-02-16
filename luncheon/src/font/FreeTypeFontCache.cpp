@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_FREETYPE
+
 #include "font/FreeTypeFontCache.h"
 #include "font/FreeTypeRenderedFontCharacter.h"
 #include <iostream>
@@ -195,3 +197,5 @@ WritePosition FreeTypeFontCache::writeMessage(
   
   
 };
+
+#endif

@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_FREETYPE
+
 #include "font/FreeTypeRenderedFontCharacter.h"
 #include "graphics/DrawPosition.h"
 #include <iostream>
@@ -139,3 +141,5 @@ void FreeTypeRenderedFontCharacter::copyGlyphToDrawable(DrawColor color) {
 
 
 }; 
+
+#endif

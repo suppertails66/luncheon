@@ -1,3 +1,5 @@
+#ifdef LUNCHEON_ENABLE_FREETYPE
+
 #include "font/FreeTypeRenderedFont.h"
 #include "font/FontCache.h"
 #include "font/FreeTypeFontCache.h"
@@ -72,3 +74,5 @@ WritePosition FreeTypeRenderedFont::writeMessage(const std::string& message,
 
 
 };
+
+#endif

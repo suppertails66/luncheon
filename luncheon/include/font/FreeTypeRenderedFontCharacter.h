@@ -2,6 +2,8 @@
 #define FREETYPERENDEREDFONTCHARACTER_H
 
 
+#ifdef LUNCHEON_ENABLE_FREETYPE
+
 #include "ft2build.h"
 #include FT_FREETYPE_H
 #include FT_GLYPH_H
@@ -49,6 +51,8 @@ protected:
 
 
 };
+
+#endif
 
 
 #endif

@@ -1,6 +1,9 @@
 #ifndef FREETYPEFONTCORE_H
 #define FREETYPEFONTCORE_H
 
+
+#ifdef LUNCHEON_ENABLE_FREETYPE
+
 #include "ft2build.h"
 #include FT_FREETYPE_H
 #include "font/FontCore.h"
@@ -41,5 +44,7 @@ protected:
 
 };
 
+
+#endif
 
 #endif 

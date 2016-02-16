@@ -2,6 +2,8 @@
 #define FREETYPEFONTCACHE_H
 
 
+#ifdef LUNCHEON_ENABLE_FREETYPE
+
 #include "ft2build.h"
 #include FT_FREETYPE_H
 #include "font/FontCache.h"
@@ -37,6 +39,9 @@ protected:
 
 
 };
+
+
+#endif	// LUNCHEON_ENABLE_FREETYPE
 
 
 #endif 
