@@ -52,7 +52,7 @@ void CoreManager::initializeCores() {
   case GraphicsCoreTypes::SDL2:
     #ifdef LUNCHEON_ENABLE_SDL2
     graphicsCore_ = new SDL2GraphicsCore();
-	#endif
+    #endif
     break;
   default:
     graphicsCore_ = 0;
@@ -68,7 +68,7 @@ void CoreManager::initializeCores() {
   case FontCoreTypes::FreeType:
     #ifdef LUNCHEON_ENABLE_FREETYPE
     fontCore_ = new FreeTypeFontCore(*graphicsCore_);
-	#endif
+    #endif
     break;
   default:
     fontCore_ = 0;
@@ -101,7 +101,7 @@ void CoreManager::initializeCores() {
   case InputCoreTypes::SDL2:
     #ifdef LUNCHEON_ENABLE_SDL2
     inputCore_ = new SDL2InputCore();
-	#endif
+    #endif
     break;
   default:
     inputCore_ = 0;
@@ -117,7 +117,7 @@ void CoreManager::initializeCores() {
   case TimingCoreTypes::SDL2:
     #ifdef LUNCHEON_ENABLE_SDL2
     timingCore_ = new SDL2TimingCore();
-	#endif
+    #endif
     break;
   default:
     timingCore_ = 0;
@@ -205,9 +205,9 @@ void CoreManager::initializeCorePrerequisites() {
   case GraphicsCoreTypes::dummy:
     break;
   case GraphicsCoreTypes::SDL2:
-	#ifdef LUNCHEON_ENABLE_SDL2
+    #ifdef LUNCHEON_ENABLE_SDL2
       SDL2SystemsToInitialize |= SDL_INIT_VIDEO;
-	#endif
+    #endif
     break;
   }
   
@@ -225,9 +225,9 @@ void CoreManager::initializeCorePrerequisites() {
   case SoundCoreTypes::dummy:
     break;
   case SoundCoreTypes::SDL2:
-	#ifdef LUNCHEON_ENABLE_SDL2
+    #ifdef LUNCHEON_ENABLE_SDL2
     SDL2SystemsToInitialize |= SDL_INIT_AUDIO;
-	#endif
+    #endif
     break;
   }
   
@@ -236,9 +236,9 @@ void CoreManager::initializeCorePrerequisites() {
   case InputCoreTypes::dummy:
     break;
   case InputCoreTypes::SDL2:
-	#ifdef LUNCHEON_ENABLE_SDL2
+    #ifdef LUNCHEON_ENABLE_SDL2
     SDL2SystemsToInitialize |= SDL_INIT_EVENTS;
-	#endif
+    #endif
     break;
   }
   
@@ -247,9 +247,9 @@ void CoreManager::initializeCorePrerequisites() {
   case TimingCoreTypes::dummy:
     break;
   case TimingCoreTypes::SDL2:
-	#ifdef LUNCHEON_ENABLE_SDL2
+    #ifdef LUNCHEON_ENABLE_SDL2
     SDL2SystemsToInitialize |= SDL_INIT_TIMER;
-	#endif
+    #endif
     break;
   }
   
