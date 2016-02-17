@@ -6,6 +6,8 @@ namespace Luncheon {
 
 
   
+const static char* defaultFontFileName("res/LiberationMono-Regular.ttf");
+  
 // Number of gticks that must pass before commands will
 // be repeated
 const GTick ListMenuWindowArea::holdRepeatTolerance(320);
@@ -48,7 +50,7 @@ ListMenuWindowArea::ListMenuWindowArea(GameMemory& gameMemory__,
     paddingRight_(8),
     paddingBottom_(8),
     selectedItemNum_(0),
-    font_("res/LiberationMono-Regular.ttf"),
+    font_(defaultFontFileName),
     fontSize_(14),
     cursorEnabledAnimation_(0),
     cursorDisabledAnimation_(0),

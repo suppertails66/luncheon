@@ -6,6 +6,8 @@
 namespace Luncheon {
 
 
+const char* GraphicsCore::graphicsResourceFileName_("res/animation.res");
+  
 GraphicsCore::~GraphicsCore() { 
   delete gameWindow_;
   
@@ -19,7 +21,7 @@ GraphicsCore::~GraphicsCore() {
 GraphicsCore::GraphicsCore()
   : coreType_(GraphicsCoreTypes::dummy),
     gameWindow_(0),
-    resourceFile_("res/animation.res") { };
+    resourceFile_(graphicsResourceFileName_) { };
 
 GraphicsCoreTypes::GraphicsCoreType GraphicsCore::coreType() const {
   return coreType_;

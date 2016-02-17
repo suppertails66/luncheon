@@ -52,6 +52,8 @@ public:
   virtual AnimationPlayer* createAnimationPlayer(ResourceID id);
   
 protected:
+  const static char* graphicsResourceFileName_;
+
   GraphicsCore();
   
   GraphicsCoreTypes::GraphicsCoreType coreType_;

@@ -57,6 +57,8 @@ public:
   virtual void resumeMusic();
   
 protected:
+  const static char* soundResourceFileName_;
+
   SoundCore(
     SoundMixerTypes::SoundMixerType soundMixerType__,
     SoundStateTypes::SoundStateType soundStateType__);

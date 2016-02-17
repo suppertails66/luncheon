@@ -7,6 +7,8 @@
 namespace Luncheon {
 
 
+const char* SoundCore::soundResourceFileName_("res/sound.res");
+
 SoundCore::~SoundCore() {
   delete state_;
   
@@ -24,7 +26,7 @@ SoundCore::SoundCore(
   : soundMixerType_(soundMixerType__),
     soundStateType_(soundStateType__),
     state_(0),
-    resourceFile_("res/sound.res") {
+    resourceFile_(soundResourceFileName_) {
   
   // Instantiate state
   switch (soundStateType_) {

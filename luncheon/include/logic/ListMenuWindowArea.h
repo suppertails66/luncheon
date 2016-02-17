@@ -127,6 +127,8 @@ public:
   virtual void reloadItems();
   
 protected:
+  const static char* defaultFontFileName;
+
   ListMenuWindowArea(GameMemory& gameMemory__,
                      GameScene& parent__,
                      Window* parentWindow__,
