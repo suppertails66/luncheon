@@ -885,4 +885,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\freetype-2.6.3\objs\vc2010\Win32\freetype263.lib" />
+  </ItemGroup>
 </Project>
