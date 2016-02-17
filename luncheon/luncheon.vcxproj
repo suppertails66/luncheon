@@ -367,7 +367,11 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\freetype263.lib" />
+    <Library Include="lib\libogg_static.lib" />
     <Library Include="lib\libvorbisfile_static.lib" />
+    <Library Include="lib\libvorbis_static.lib" />
+    <Library Include="lib\SDL2.lib" />
+    <Library Include="lib\SDL2main.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
