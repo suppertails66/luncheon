@@ -886,6 +886,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\freetype-2.6.3\objs\vc2010\Win32\freetype263.lib" />
+    <Library Include="lib\freetype263.lib" />
+    <Library Include="lib\libvorbisfile_static.lib" />
   </ItemGroup>
 </Project>

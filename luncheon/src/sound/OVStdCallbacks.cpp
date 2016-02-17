@@ -43,14 +43,17 @@ int OVStdCallbacks::seek_func(void* datasource,
               int whence) {
   std::ifstream& ifs = (std::ifstream&) *((std::ifstream*)datasource);
   ifs.clear();
+  return 0;
 }
 
 int OVStdCallbacks::close_func(void* datasource) {
-  
+  std::ifstream& ifs = (std::ifstream&) *((std::ifstream*)datasource);
+  return 0;
 }
 
 long OVStdCallbacks::tell_func(void* datasource) {
-  
+  std::ifstream& ifs = (std::ifstream&) *((std::ifstream*)datasource);
+  return ifs.tellg();
 }
 
 
