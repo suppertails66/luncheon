@@ -1,5 +1,6 @@
 #include "TestGameStarter.h"
 #include "SDL.h"
+#include <iostream>
 
 using namespace LuncheonTest;
 
